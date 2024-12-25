@@ -10,7 +10,7 @@ search.addEventListener('click',async ()=>{
     console.log(city);
     if(city=='')
         return;
-
+// this a new change
     // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
     await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).
@@ -22,7 +22,7 @@ search.addEventListener('click',async ()=>{
             const humidity=document.querySelector('.weather-details .humidity .text .info-humidity ');
             const wind=document.querySelector('.weather-details .wind .text .info-wind');
 
-            console.log(json)
+            
 
             switch(json.weather[0].main){
                 case 'Clear':
@@ -67,51 +67,3 @@ search.addEventListener('click',async ()=>{
 
 
 
-
-
-
-// {
-//     "coord": {
-//         "lon": 139.7531,
-//         "lat": 35.6854
-//     },
-//     "weather": [
-//         {
-//             "id": 802,
-//             "main": "Clouds",
-//             "description": "scattered clouds",
-//             "icon": "03n"
-//         }
-//     ],
-//     "base": "stations",
-//     "main": {
-//         "temp": 8.85,
-//         "feels_like": 6.3,
-//         "temp_min": 6.09,
-//         "temp_max": 9.93,
-//         "pressure": 1021,
-//         "humidity": 64,
-//         "sea_level": 1021,
-//         "grnd_level": 1018
-//     },
-//     "visibility": 10000,
-//     "wind": {
-//         "speed": 4.63,
-//         "deg": 170
-//     },
-//     "clouds": {
-//         "all": 40
-//     },
-//     "dt": 1735132895,
-//     "sys": {
-//         "type": 2,
-//         "id": 268395,
-//         "country": "JP",
-//         "sunrise": 1735076921,
-//         "sunset": 1735111992
-//     },
-//     "timezone": 32400,
-//     "id": 1861060,
-//     "name": "Japan",
-//     "cod": 200
-// }
