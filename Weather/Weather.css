@@ -58,7 +58,7 @@ body{
     text-transform: capitalize;
 }
 .serach-box button{
-    position:absolute;
+    position: absolute;
     right: 0;
     width: 40px;
     height: 100%;
